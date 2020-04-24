@@ -4,7 +4,7 @@
 
 Voorbeelden en demo's bij de training Angular Fundamentals (Peter Eijgermans <mailto:peter.eijgermans@ordina.nl>)
 
-Voorbeelden en oefeningen zijn bijgewerkt naar `Angular 7.0.2`.
+Voorbeelden en oefeningen zijn bijgewerkt naar `Angular 10.0.0`.
 
 ## Gebruik
 
@@ -18,7 +18,7 @@ Zie de oefeningen en slides voor verdere informatie.
 
 Workshops, exercises and demo's on the training Angular Fundamentals (Peter Eijgermans <mailto:peter.eijgermans@ordina.nl>)
 
-Workshops and exercises are updated to `Angular 7.0.2`.
+Workshops and exercises are updated to `Angular 10.0.0`.
 
 ## Usage
 

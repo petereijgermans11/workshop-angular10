@@ -1,0 +1,18 @@
+<h1>Fetch cities async from .json file</h1>
+<h2>With caching of data. See Dev Tools Console</h2>
+<ul class="list-group">
+	<li *ngFor="let city of cities | async"
+		class="list-group-item"
+		(click)="getCity(city)">
+		{{ city.id}} - {{ city.name }}
+	</li>
+</ul>
+<button class="btn btn-primary" (click)="loadCities()">(re)load cities</button>
+<button *ngIf="cities" class="btn btn-primary" (click)="clear()">clear list</button>
+<button *ngIf="cities" class="btn btn-success" (click)="clearCache()">clear cache</button>
+<hr>
+<div *ngIf="currentCity">
+	<h2>You picked: {{ currentCity.name }}</h2>
+	<img class="cityPhoto"
+		 [src]="cityPhoto" alt="Foto van {{ currentCity.name}}">
+</div>

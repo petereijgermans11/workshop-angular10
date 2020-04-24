@@ -1,0 +1,15 @@
+<h1>Dropdown list with cities</h1>
+<!-- HTML Dropdown list with cities-->
+<select [(ngModel)]="currentCity" (ngModelChange)="changeCity()">
+    <option disabled>Select one...</option>
+    <option *ngFor="let city of cities"
+            [value]="city.name">
+        {{ city.id}} - {{ city.name }}
+    </option>
+</select>
+<hr>
+<div *ngIf="cityPhoto">
+    <img class="cityPhoto"
+         [src]="cityPhoto" alt="Foto van {{ currentCity.name}}">
+    <h2>You picked: {{ currentCity }}</h2>
+</div>

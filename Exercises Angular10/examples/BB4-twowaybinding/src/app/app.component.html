@@ -1,0 +1,29 @@
+<style>
+	.photoCity {
+		max-width : 300px;
+	}
+</style>
+<h1>Hello Angular</h1>
+<h2>My favourite cities:</h2>
+<ul class="list-group">
+	<li *ngFor="let city of cities" class="list-group-item"
+		(click)="updateCity(city)">
+		{{ city.id}} - {{ city.name }}
+	</li>
+</ul>
+<hr>
+
+<!-- Two-way binding -->
+<h2>Two-way binding</h2>
+<input type="text" class="form-control-lg"
+	   [(ngModel)]="newCity" placeholder="City..."/>
+		<!--Notice: import FormsModule in app.module.ts, because we're using ngModel! -->
+<h2>{{ newCity }}</h2>
+
+<h2>Two-way binding with extensive syntax</h2>
+<!-- Two-way binding with extensive syntax-->
+<input type="text" class="form-control-lg"
+	   [value]="newCityExtended"
+	   (input)="newCityExtended = $event.target.value"
+	   placeholder="City..."/>
+<h2>{{ newCityExtended }}</h2>

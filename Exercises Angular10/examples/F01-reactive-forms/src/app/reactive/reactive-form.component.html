@@ -1,0 +1,58 @@
+<div class="form">
+
+    <form [formGroup]="formGroup" >
+        <div class="personal-info">
+            <label>
+                Username:
+                <input type="text" formControlName="username"/>
+            </label>
+            <label>
+                First name:
+                <input type="text" formControlName="firstName"/>
+            </label>
+
+            <label>
+                Last name:
+                <input type="text" formControlName="lastName"/>
+            </label>
+
+            <label>
+                Email:
+                <input type="email" formControlName="email"/>
+            </label>
+            
+            <label>
+                Phone number:
+                <input type="phone" formControlName="phoneNumber"/>
+            </label>
+        </div>
+
+        <div>
+            <!-- If all radio buttons have the same formControlName, they will belong to the same 'group'-->
+            Select gender:
+            <input type="radio" [value]="Gender.MALE" formControlName="gender"/>Male
+            <input type="radio" [value]="Gender.FEMALE" formControlName="gender"/>Female
+            <input type="radio" [value]="Gender.OTHER" formControlName="gender"/>Other
+        </div>
+
+        <div>
+            Select Developer level
+            <select formControlName="skillLevel">
+                <!-- Loop through all skillLevels and print them into an 'option' -->
+                <option *ngFor="let skillLevel of skillLevels" [value]="skillLevel">
+                    {{skillLevel}}
+                </option>
+            </select>
+        </div>
+        <button  type="submit"  class="btn  btn‐primary" (click)="onSubmit()" [disabled]="!formGroup.valid">
+            Submit
+            </button>
+            
+        
+    </form>
+    <!-- shows the form value live on screen -->
+    <p>Form Value: {{ formGroup.value | json }}</p>
+      
+    <!-- show the form status live on screen -->
+    <p>Form Status: {{ formGroup.status }}</p>
+</div>

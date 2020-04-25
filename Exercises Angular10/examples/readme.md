@@ -4,6 +4,7 @@ Every folder is a seperate project: use `npm install`  and `npm start` from a co
 
 ## Contents
 - AAA - Hello World, Data binding examples
+- Bxx - Databinding
 - Cxx - Services
 - Dxx - Components
 - Exx - Router examples

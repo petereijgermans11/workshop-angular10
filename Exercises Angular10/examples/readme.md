@@ -10,7 +10,8 @@ Every folder is a seperate project: use `npm install`  and `npm start` from a co
 - Exx - Router examples
 - Fxx - Forms
 - Gxx - Miscellaneous
-- Hxx - Work in Progress (wip)
+- Hxx - New features in Angular 10
 
 (C) Copyright 2020 - Peter Eijgermans, peter.eijgermans@ordina.nl
  
+

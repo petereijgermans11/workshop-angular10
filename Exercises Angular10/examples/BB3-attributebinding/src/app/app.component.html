@@ -18,3 +18,7 @@
 	<img [src]="cityPhoto" [alt]="currentCity.name" class="cityPhoto">
 	<h2> My city: {{ currentCity.name}}</h2>
 </div>
+
+<button  class="btn  btn‐success"  (click)="toggleText()">Toggle  text</button>
+<h2  [hidden]="textVisible">Geweldige  steden,  allemaal.</h2>
+

@@ -46,4 +46,9 @@ export class AppComponent {
         this.currentCity = city;
         this.cityPhoto = `assets/img/${this.currentCity.name}.jpg`;
     }
+
+  toggleText(){
+    this.textVisible  =  !this.textVisible;
+  }
+
 }

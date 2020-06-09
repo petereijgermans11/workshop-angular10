@@ -2,7 +2,7 @@ import {Component} from '@angular/core';
 import {City} from './shared/city.model';
 
 @Component({
-	selector   : 'app2',
+	selector   : 'app-root',
 	templateUrl: 'app-02.component.html'
 })
 
@@ -20,7 +20,7 @@ export class AppComponent2 {
 	addCity(txtCity) {
 		// Calculate dummy new ID.
 		let newID   = this.cities.length + 1;
-		
+
 		// Create new City-object and add it to the array.
 		let newCity = new City(newID, txtCity.value, 'Unknown');
 		this.cities.push(newCity);

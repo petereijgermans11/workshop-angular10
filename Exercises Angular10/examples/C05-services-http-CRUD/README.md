@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 This project consists of two parts:
-- a server (with `json-server`) that is capturing the CRUD requests (b/c browsers cannout look outside their own scope).
+- a server (with `json-server`) that is capturing the CRUD requests (b/c browsers cannot look outside their own scope).
 This server updates a small file, called `cities.json`.
 - a client : start it in the usual way with `npm start`.
 

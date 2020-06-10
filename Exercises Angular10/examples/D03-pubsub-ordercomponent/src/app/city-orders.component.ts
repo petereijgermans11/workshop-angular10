@@ -1,9 +1,10 @@
 // city.orders.ts - Some kind of 'shopping basket',
 // to remember which city trips are booked.
-import {Component} from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 import {OrderService} from "./shared/services/order.service";
 import {City} from "./shared/model/city.model";
 import {CityOrderModel} from "./shared/model/cityOrders.model";
+import {Subscription} from 'rxjs';
 
 @Component({
     selector: 'city-orders',
@@ -32,9 +33,10 @@ import {CityOrderModel} from "./shared/model/cityOrders.model";
     `
 })
 
-export class CityOrdersComponent {
-    currentOrders: CityOrderModel[] = [];
-    totalPrice: number = 0;
+export class CityOrdersComponent implements OnDestroy {
+    public currentOrders: CityOrderModel[] = [];
+    public totalPrice: number = 0;
+    private sub: Subscription;
 
     // Injection of *the same* instance of OrderService.
     constructor(private orderService: OrderService) {
@@ -43,7 +45,7 @@ export class CityOrdersComponent {
 
     ngOnInit() {
         // Subscribe to events being published on the orderService.Stream property.
-        this.orderService.Stream
+      this.sub = this.orderService.Stream
             .subscribe(
                 (city: City) => this.processOrder(city),
                 (err) => console.log('Error when processing City-order'),
@@ -51,13 +53,13 @@ export class CityOrdersComponent {
             )
     }
 
-    processOrder(city: City) {
+    public processOrder(city: City) {
         console.log('Received order for city: ', city);
         this.currentOrders.push(new CityOrderModel(city));
         this.calculateTotal();
     }
 
-    calculateTotal() {
+    public calculateTotal() {
         this.totalPrice = 0; // reset
         this.currentOrders.forEach(order => {
             this.totalPrice += (order.numBookings * order.city.price);
@@ -75,5 +77,11 @@ export class CityOrdersComponent {
     confirm() {
         // POST this.currentOrders.stringify()....etc.
         alert('TODO: save order in database...')
+    }
+
+    ngOnDestroy() {
+    // If subscribed, we must unsubscribe before Angular destroys the component.
+    // Failure to do so could create a memory leak.
+       this.sub.unsubscribe();
     }
 }

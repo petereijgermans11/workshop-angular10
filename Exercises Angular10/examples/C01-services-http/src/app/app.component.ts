@@ -1,6 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, OnDestroy} from '@angular/core';
 import {City} from './shared/model/city.model';
 import {CityService} from "./shared/services/city.service";
+import {Subscription} from 'rxjs';
 
 @Component({
     selector: 'app-root',
@@ -13,9 +14,10 @@ import {CityService} from "./shared/services/city.service";
 // Class
 export class AppComponent implements OnInit {
     // Properties
-    currentCity: City;
-    cities: City[];
-    cityPhoto: string;
+    public currentCity: City;
+    public cities: City[];
+    public cityPhoto: string;
+    private sub: Subscription;
 
     // Inject instance of CityService
     constructor(private cityService: CityService) {
@@ -23,7 +25,7 @@ export class AppComponent implements OnInit {
     }
 
     ngOnInit() {
-        this.cityService.getCities()
+      this.sub = this.cityService.getCities()
             .subscribe(cityData => {						// 1. success handler
                     this.cities = cityData
                 },
@@ -31,8 +33,14 @@ export class AppComponent implements OnInit {
                 () => console.log('Getting cities complete'));	// 3. complete handler
     }
 
-    getCity(city: City) {
+    public getCity(city: City) {
         this.currentCity = city;
         this.cityPhoto = `assets/img/${this.currentCity.name}.jpg`;
+    }
+
+    ngOnDestroy() {
+    // If subscribed, we must unsubscribe before Angular destroys the component.
+    // Failure to do so could create a memory leak.
+        this.sub.unsubscribe();
     }
 }

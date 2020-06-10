@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 import {MovieService} from "./shared/services/movie.service";
 import {MovieModel} from "./shared/model/movie.model";
+import {Subscription} from 'rxjs';
 
 // Component annotation.
 @Component({
@@ -13,13 +14,14 @@ import {MovieModel} from "./shared/model/movie.model";
 export class AppComponent {
 	// Properties , now a Custom model
 	public movies:MovieModel[];
+  private sub: Subscription;
 
 	constructor(private movieService:MovieService) {
 
 	}
 
 	searchMovies(keyword) {
-		this.movieService.searchMovies(keyword)
+    this.sub = this.movieService.searchMovies(keyword)
 			.subscribe((movieData:MovieModel[]) => {
 					this.movies = movieData;				// 1. success handler, mapped on client-sided Model
 				},
@@ -27,4 +29,10 @@ export class AppComponent {
 				()=> console.log('Getting movies complete...')	// 3. complete handler
 			)
 	}
+
+  ngOnDestroy() {
+    // If subscribed, we must unsubscribe before Angular destroys the component.
+    // Failure to do so could create a memory leak.
+    this.sub.unsubscribe();
+  }
 }

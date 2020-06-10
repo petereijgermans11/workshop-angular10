@@ -1,6 +1,7 @@
-import {Component} from '@angular/core';
+import {Component, OnDestroy} from '@angular/core';
 import {MovieService} from "./shared/services/movie.service";
 import {map} from "rxjs/operators";
+import {Subscription} from 'rxjs';
 
 // Component annotation.
 @Component({
@@ -12,13 +13,14 @@ import {map} from "rxjs/operators";
 export class AppComponent {
     // Properties
     public movies: any; // TODO: Should be typed as MovieModel, or the like.
+    private sub: Subscription;
 
     constructor(private movieService: MovieService) {
 
     }
 
     searchMovies(keyword) {
-        this.movieService.searchMovies(keyword)
+      this.sub = this.movieService.searchMovies(keyword)
             .pipe(
                 map((movies: any) => movies.Search)
             )
@@ -29,4 +31,10 @@ export class AppComponent {
                 () => console.log('Getting movies complete...')	// 3. complete handler
             )
     }
+
+  ngOnDestroy() {
+    // If subscribed, we must unsubscribe before Angular destroys the component.
+    // Failure to do so could create a memory leak.
+    this.sub.unsubscribe();
+  }
 }

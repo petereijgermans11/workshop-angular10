@@ -1,7 +1,8 @@
 // app.component.ts
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, OnDestroy} from '@angular/core';
 import {City} from './shared/city.model'
 import {CityService} from "./shared/city.service";
+import {Subscription} from 'rxjs';
 
 @Component({
 	selector   : 'app-root',
@@ -13,6 +14,7 @@ export class AppComponent implements  OnInit{
 	// Properties
 	public cities: City[];
 	public currentCity: City;
+  private sub: Subscription;
 
 	constructor(private cityService: CityService) {
 
@@ -35,7 +37,7 @@ export class AppComponent implements  OnInit{
 	//***********************
 	getCities() {
 		if (!this.cities) {
-			this.cityService.getCities()
+      this.sub = this.cityService.getCities()
 				.subscribe(cityData => {
 						this.cities = cityData;				// 1. success handler
 					},
@@ -44,4 +46,10 @@ export class AppComponent implements  OnInit{
 				)
 		}
 	}
+
+  ngOnDestroy() {
+    // If subscribed, we must unsubscribe before Angular destroys the component.
+    // Failure to do so could create a memory leak.
+    this.sub.unsubscribe();
+  }
 }

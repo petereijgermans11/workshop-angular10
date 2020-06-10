@@ -30,7 +30,7 @@ export class AppComponent implements  OnInit{
   // ***********************
   // implementation
   // ***********************
-  getCities() {
+  public getCities() {
     this.cityService.getCities()
       .subscribe(cityData => {
           this.cities            = cityData;	// 1. success handler

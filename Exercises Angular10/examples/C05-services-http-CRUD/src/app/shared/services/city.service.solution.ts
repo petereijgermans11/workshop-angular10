@@ -20,7 +20,7 @@ export class CityService {
     }
 
     // GET: return all cities
-    getCities(): Observable<City[]> {
+    public getCities(): Observable<City[]> {
         return this.http.get<City[]>(API_URL).pipe(
 
             catchError(err => {
@@ -31,12 +31,12 @@ export class CityService {
     }
 
     // GET: Return 1 City, based on Id
-    getCity(id: number): Observable<City> {
+    public getCity(id: number): Observable<City> {
         return this.http.get<City>(API_URL + `/${id}`)
     }
 
     // POST: Add a new City
-    addCity(cityName: string): Observable<City> {
+    public addCity(cityName: string): Observable<City> {
 
         let newCity = new City(null, cityName);
 
@@ -49,17 +49,17 @@ export class CityService {
     }
 
     // DELETE: Delete city from the .json-file (warning: no trash. City is actually removed)
-    deleteCity(city) {
+    public deleteCity(city) {
         return this.http.delete(API_URL + `/${city.id}`)
     }
 
     // PUT : update a current city
-    updateCity(city: City): Observable<City> {
+    public updateCity(city: City): Observable<City> {
         return this.http.put<City>(
             API_URL + `/${city.id}`,
             JSON.stringify(city),
             API_ARGS
         )
-        
+
     }
 }

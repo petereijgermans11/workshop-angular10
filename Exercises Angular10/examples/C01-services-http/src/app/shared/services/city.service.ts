@@ -10,7 +10,7 @@ export class CityService {
     }
 
     // return all cities
-    getCities(): Observable<City[]> {
+    public getCities(): Observable<City[]> {
         return this.http.get<City[]>('assets/data/cities.json');
     }
 }

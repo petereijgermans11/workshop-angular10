@@ -22,11 +22,11 @@ import {Observable} from 'rxjs';
 // *************
 export class AppComponent implements OnInit {
 	// Properties on the component/class
-	currentCity: City;
-	cities: Observable<City[]>;
-	cityPhoto: string;
-	cityAdded: City;
-	isEditing: boolean = false;
+  public currentCity: City;
+  public cities: Observable<City[]>;
+  public cityPhoto: string;
+  public cityAdded: City;
+  public isEditing: boolean = false;
 
 	constructor(private cityService: CityService) {
 	}
@@ -38,7 +38,7 @@ export class AppComponent implements OnInit {
 	}
 
 	// 1. Get city by Id
-	getCity(city: City): void {
+  public getCity(city: City): void {
 		// Not using the async pipe, because of additional calculations in the .subscribe() block
 		this.cityService.getCity(city.id)
 			.subscribe(city => {
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
 	}
 
 	// 2. Add a city
-	addCity(name: string): void {
+  public addCity(name: string): void {
 		this.cityService.addCity(name)
 			.subscribe(result => {
 				this.cityAdded = result;
@@ -57,7 +57,7 @@ export class AppComponent implements OnInit {
 	}
 
 	// 3. Delete a city
-	removeCity(city) {
+  public removeCity(city) {
 		this.cityService.deleteCity(city)
 			.subscribe(res => {
 				this.currentCity = null;
@@ -67,7 +67,7 @@ export class AppComponent implements OnInit {
 	}
 
 	// 4. Edit a city & update
-	updateCity() {
+  public updateCity() {
 		this.cityService.updateCity(this.currentCity)
 			.subscribe(res=>{
 				this.currentCity = res; // should be the same.

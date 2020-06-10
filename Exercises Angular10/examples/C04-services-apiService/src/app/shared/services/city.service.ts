@@ -14,17 +14,17 @@ export class CityService {
 	}
 
 	// return all cities as an Observable
-	getCities(): Observable<City[]> {
+  public getCities(): Observable<City[]> {
 		return this.apiService.getCities();
 	}
 
 	// get city by ID
-	getCity(id: number): Observable<City> {
+  public getCity(id: number): Observable<City> {
 		return this.apiService.getCity(id);
 	}
 
 	// add a new city, return the added city as an Observable
-	addCity(newCity: City): Observable<City> {
+  public addCity(newCity: City): Observable<City> {
 		return this.apiService.createCity(newCity);
 	}
 }

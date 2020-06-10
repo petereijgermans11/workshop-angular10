@@ -10,7 +10,7 @@ import {Subscription} from 'rxjs';
 })
 
 // Class
-export class AppComponent implements OnInit {
+export class AppComponent implements OnInit, OnDestroy  {
 	// Properties
 	public currentCity: City;
   public cities: City[];

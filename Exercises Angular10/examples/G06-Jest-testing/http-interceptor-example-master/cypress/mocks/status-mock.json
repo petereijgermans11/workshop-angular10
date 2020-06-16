@@ -1,0 +1,19 @@
+{
+    "expression": "/status",
+    "method": "GET",
+    "name": "getStatus",
+    "isArray": true,
+    "responses": {
+      "status OK": {
+        "default": true,
+        "status": 200,
+        "data": [{
+            "message": "OK"
+        }]
+      },
+      "status Unauthorized": {
+        "status": 401,
+        "data": {}
+      }
+    }
+  }

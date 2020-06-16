@@ -1,0 +1,51 @@
+{
+  "name": "http-interceptor-example",
+  "version": "0.0.0",
+  "scripts": {
+    "ng": "ng",
+    "start": "ng serve",
+    "serve.mock": "concurrently --kill-others \"ng serve --proxy-config src/mock/proxy.config.json\" \"node src/mock/serve-mockdata.js\"",
+    "build": "ng build",
+    "test": "ng test",
+    "test.watch": "ng test --watch",
+    "lint": "ng lint",
+    "e2e": "ng e2e",
+    "cypress": "concurrently \"npm run serve.mock\" \"cypress run\"",
+    "cypress:open": "cypress open"
+  },
+  "private": true,
+  "dependencies": {
+    "@angular/animations": "~8.2.14",
+    "@angular/common": "~8.2.14",
+    "@angular/compiler": "~8.2.14",
+    "@angular/core": "~8.2.14",
+    "@angular/forms": "~8.2.14",
+    "@angular/platform-browser": "~8.2.14",
+    "@angular/platform-browser-dynamic": "~8.2.14",
+    "@angular/router": "~8.2.14",
+    "rxjs": "~6.4.0",
+    "tslib": "^1.10.0",
+    "zone.js": "~0.9.1"
+  },
+  "devDependencies": {
+    "@angular-builders/jest": "^8.3.2",
+    "@angular-devkit/build-angular": "~0.803.24",
+    "@angular/cli": "~8.3.24",
+    "@angular/compiler-cli": "~8.2.14",
+    "@angular/language-service": "~8.2.14",
+    "@nrwl/cypress": "^8.12.0",
+    "@nrwl/workspace": "^8.12.0",
+    "@types/jest": "^24.0.23",
+    "@types/node": "~8.9.4",
+    "codelyzer": "^5.2.1",
+    "concurrently": "^5.1.0",
+    "cors": "^2.8.5",
+    "cypress": "^3.8.3",
+    "express": "^4.17.1",
+    "jest": "^24.9.0",
+    "ng-apimock": "^1.4.9",
+    "ts-node": "~7.0.0",
+    "tslint": "~5.15.0",
+    "typescript": "~3.5.3"
+  }
+}

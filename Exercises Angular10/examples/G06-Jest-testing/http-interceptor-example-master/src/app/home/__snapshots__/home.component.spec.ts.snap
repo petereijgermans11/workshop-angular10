@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HomeComponent should render properly 1`] = `
+<app-home
+  statusService={[Function Object]}
+  statusText$={[Function Observable]}
+  triggerStatus$={[Function Subject]}
+>
+  <p>
+    Home page
+  </p><button>
+    Get status
+  </button><p>
+    no status
+  </p>
+</app-home>
+`;

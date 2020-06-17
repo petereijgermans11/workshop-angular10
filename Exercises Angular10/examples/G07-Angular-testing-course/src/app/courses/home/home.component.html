@@ -8,7 +8,7 @@
 
       <ng-container *ngIf="(beginnerCourses$ | async) as beginnerCourses">
 
-        <mat-tab label="Beginners" *ngIf="beginnerCourses?.length > 0">
+        <mat-tab label="Beginners">
 
           <courses-card-list (courseEdited)="reloadCourses()"
                              [courses]="beginnerCourses">
@@ -22,7 +22,7 @@
 
       <ng-container  *ngIf="(advancedCourses$ | async) as advancedCourses">
 
-        <mat-tab label="Advanced" *ngIf="advancedCourses?.length > 0">
+        <mat-tab label="Advanced">
 
           <courses-card-list (courseEdited)="reloadCourses()"
                              [courses]="advancedCourses">

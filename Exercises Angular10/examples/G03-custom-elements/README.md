@@ -5,6 +5,8 @@ See tutorial: https://www.techiediaries.com/angular/angular-9-web-components-cus
 
 ## Development server
 
+First step: install the application with command:  `npm install`
+
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Code scaffolding

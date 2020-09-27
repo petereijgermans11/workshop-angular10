@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
 // Custom Components
-import { AppComponent } from './app.component';
+import { WeatherComponent } from './weather.component';
 
 // Import services
 import { WeatherService } from './shared/services/weather.service';
@@ -12,8 +12,8 @@ import { WeatherService } from './shared/services/weather.service';
 // Module declaration
 @NgModule({
   imports: [BrowserModule, HttpClientModule],
-  declarations: [AppComponent],
-  bootstrap: [AppComponent],
+  declarations: [WeatherComponent],
+  bootstrap: [WeatherComponent],
   providers: [WeatherService] // DI voor service
 })
-export class AppModule {}
+export class WeatherModule {}

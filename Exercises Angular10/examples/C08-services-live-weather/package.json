@@ -46,7 +46,9 @@
     "typescript": "~3.8.3"
   },
   "bit": {
-    "env": {},
+    "env": {
+      "compiler": "bit.envs/compilers/angular@9.0.23"
+    },
     "componentsDefaultDirectory": "components/{name}",
     "packageManager": "npm"
   }

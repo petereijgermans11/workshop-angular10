@@ -1,1 +1,18 @@
-[]
+[
+  {
+    "id": {
+      "scope": "bit.envs",
+      "name": "compilers/angular"
+    },
+    "isSymlink": false,
+    "hash": "ff9bc2ee2e58fda705df24b3be15badf367346ef"
+  },
+  {
+    "id": {
+      "scope": "bit.envs",
+      "name": "compilers/utils"
+    },
+    "isSymlink": false,
+    "hash": "cc7bb2c0111e69015e8cf907fc7b13755039e61c"
+  }
+]

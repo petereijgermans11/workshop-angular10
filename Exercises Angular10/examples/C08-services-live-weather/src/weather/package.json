@@ -1,0 +1,10 @@
+{
+  "es2015": "dist/fesm2015/bit-weather.js",
+  "esm5": "dist/esm5/bit-weather.js",
+  "esm2015": "dist/esm2015/bit-weather.js",
+  "fesm5": "dist/fesm5/bit-weather.js",
+  "fesm2015": "dist/fesm2015/bit-weather.js",
+  "module": "dist/fesm5/bit-weather.js",
+  "typings": "dist/bit-weather.d.ts",
+  "metadata": "dist/bit-weather.metadata.json"
+}

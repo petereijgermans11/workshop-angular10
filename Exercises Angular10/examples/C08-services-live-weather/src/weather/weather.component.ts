@@ -12,9 +12,10 @@ export class WeatherComponent {
 	public weather$:Observable<IWeather>;
 
 	constructor(private weatherService:WeatherService) {
+    this.weather$ = new Observable<IWeather>();
 	}
 
-  searchWeather(keyword) {
+  searchWeather(keyword: string) {
     this.weather$ = this.weatherService.searchWeather(keyword);
   }
 }

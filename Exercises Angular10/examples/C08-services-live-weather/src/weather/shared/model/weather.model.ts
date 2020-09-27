@@ -1,7 +1,7 @@
 // Weather.model.ts
 export interface IWeather {
   coord: Coord;
-  weather?: (WeatherEntity)[] | null;
+  weather: (WeatherEntity)[];
   base: string;
   main: Main;
   wind: Wind;

@@ -10,9 +10,9 @@ import {City} from './shared/city.model';
 // Clas
 export class AppComponent implements OnInit {
     // Properties
-    currentCity: City;
-    cityPhoto: string;
-    cities: City[];
+    public currentCity: City;
+    public cityPhoto: string;
+    public cities: City[];
 
     ngOnInit() {
         this.cities = [

@@ -18,10 +18,10 @@ import { Observable } from 'rxjs';
 // Class
 export class AppComponent implements OnInit {
 	// Properties
-	currentCity: City;
+	public currentCity: City;
 	// cities$ is now an observable to an array of cities.
-	cities$: Observable<City[]>;
-	cityPhoto: string;
+  public cities$: Observable<City[]>;
+  public cityPhoto: string;
 
 	constructor(private cityService: CityService) {}
 

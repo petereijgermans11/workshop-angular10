@@ -12,9 +12,9 @@ import { CityService } from './shared/services/city.service';
 // Class
 export class AppComponent implements OnInit {
   // Properties
-  currentCity: City;
-  cities: Observable<City[]>;
-  cityPhoto: string;
+  public currentCity: City;
+  public cities: Observable<City[]>;
+  public cityPhoto: string;
 
 
   constructor(private cityService: CityService) {}

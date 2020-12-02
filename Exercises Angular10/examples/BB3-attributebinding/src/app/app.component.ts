@@ -30,16 +30,16 @@ import {City} from './shared/city.model';
 // Class
 export class AppComponent {
     // Properties
-    name: string = 'Peter Eijgermans';
-    cities: City[] = [
+    public name: string = 'Peter Eijgermans';
+    public cities: City[] = [
         new City(1, 'Groningen', 'Groningen'),
         new City(2, 'Hengelo', 'Overijssel'),
         new City(3, 'Den Haag', 'Zuid-Holland'),
         new City(4, 'Enschede', 'Overijssel'),
     ];
-    textVisible: boolean = true;
-    currentCity: City = null;
-    cityPhoto: string = '';
+    private textVisible: boolean = true;
+    public currentCity: City = null;
+    public cityPhoto: string = '';
 
     // Update selected city in UI, using ES6 string interpolation
     updateCity(city: City) {

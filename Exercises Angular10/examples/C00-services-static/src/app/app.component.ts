@@ -22,9 +22,9 @@ import {CityService} from "./shared/city.service";
 // Class
 export class AppComponent implements OnInit {
 	// Properties
-	currentCity: City;
-	cities: City[];
-	cityPhoto: string;
+	public currentCity: City;
+  public cities: City[];
+  public cityPhoto: string;
 
 	// Injection of cityService, which is of type CityService.
 	// Notice the use of the keyword `private` here.

@@ -9,15 +9,16 @@ import {City} from './shared/city.model'
 
 // Class
 export class AppComponent {
-  newCityExtended:string = '';
-  newCity:string = '';
+  public newCityExtended:string = '';
+  public newCity:string = '';
 
 	// Properties
-	cities:City[]  = [
-		new City(1, 'Groningen', 'Groningen'),
+	cities: City[]  = [
+		new City(1, 'Groningen', 'Groningen', '', ''),
 		new City(2, 'Hengelo', 'Overijssel'),
 		new City(3, 'Den Haag', 'Zuid-Holland'),
 		new City(4, 'Enschede', 'Overijssel'),
+
 	];
 
 	updateCity(city:City){

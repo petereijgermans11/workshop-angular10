@@ -9,8 +9,8 @@ import {City} from './shared/city.model';
 // push new city to the array
 export class AppComponent2 {
 	// Properties
-	name   = 'Peter Eijgermans';
-	cities = [
+	name: string = 'Peter Eijgermans';
+	cities: City[] = [
 		new City(1, 'Groningen', 'Groningen'),
 		new City(2, 'Hengelo', 'Overijssel'),
 		new City(3, 'Den Haag', 'Zuid-Holland'),
@@ -19,10 +19,10 @@ export class AppComponent2 {
 
 	addCity(txtCity) {
 		// Calculate dummy new ID.
-		let newID   = this.cities.length + 1;
+		let newID: number = this.cities.length + 1;
 
 		// Create new City-object and add it to the array.
-		let newCity = new City(newID, txtCity.value, 'Unknown');
+		let newCity: City = new City(newID, txtCity.value, 'Unknown');
 		this.cities.push(newCity);
 		txtCity.value = '';
 	}

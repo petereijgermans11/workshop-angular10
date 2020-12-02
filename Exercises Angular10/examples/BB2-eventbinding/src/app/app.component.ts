@@ -23,8 +23,8 @@ import {City} from './shared/city.model'
 // Class with properties, array containing cities
 export class AppComponent {
 	// Properties on the component/class
-	name   = 'Peter Eijgermans';
-	cities = [
+	name: string = 'Peter Eijgermans';
+	cities: City[] = [
 		new City(1, 'Groningen', 'Groningen'),
 		new City(2, 'Hengelo', 'Overijssel'),
 		new City(3, 'Den Haag', 'Zuid-Holland'),

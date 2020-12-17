@@ -16,7 +16,7 @@ export class AppComponent {
 
   constructor(private http: HttpClient) {}
 
-  doLogin() {
+  public doLogin() {
     // Post data naar reqres.in API.
     // EIGENLIJK moet dit via een service, maar nu rechtstreeks in de controller/class gedefinieerd.
     // Zie voor meer info over deze API http://reqres.in.

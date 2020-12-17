@@ -8,7 +8,7 @@ export class CityService {
   constructor(private http: HttpClient) {}
 
   // retourneer alle cities
-  getCities(): Observable<City[]> {
+  public getCities(): Observable<City[]> {
     return this.http.get<City[]>('assets/data/cities.json');
   }
 }

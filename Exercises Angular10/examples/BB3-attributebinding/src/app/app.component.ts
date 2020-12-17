@@ -42,13 +42,13 @@ export class AppComponent {
     public cityPhoto: string = '';
 
     // Update selected city in UI, using ES6 string interpolation
-    updateCity(city: City) {
+    public updateCity(city: City) {
         this.currentCity = city;
         this.cityPhoto = `assets/img/${this.currentCity.name}.jpg`;
     }
 
-  toggleText(){
-    this.textVisible  =  !this.textVisible;
-  }
+    public toggleText(){
+        this.textVisible  =  !this.textVisible;
+    }
 
 }

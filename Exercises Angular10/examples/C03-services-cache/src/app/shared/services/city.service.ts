@@ -13,7 +13,7 @@ export class CityService {
   constructor(private http: HttpClient) {}
 
   // retourneer alle cities, gemapt naar json
-  getCities(): Observable<City[]> {
+  public getCities(): Observable<City[]> {
     if (this.cityCache) {
       // 1. cities al aanwezig. Return Observable naar cities.
       return of(this.cityCache);
@@ -41,7 +41,7 @@ export class CityService {
     }
   }
 
-  clearCache() {
+  public clearCache() {
     console.log('Cache cleared - cities removed');
     this.cityCache = null;
   }

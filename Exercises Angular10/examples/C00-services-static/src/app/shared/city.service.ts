@@ -11,12 +11,12 @@ export class CityService {
 	];
 
 	// return all cities
-	getCities(): City[] {
+  public getCities(): City[] {
 		return this.cities
 	}
 
 	// return city based on ID
-	getCity(id: number): City {
+  public getCity(id: number): City {
 		//return this.cities.find(c => c.id === id);
 
 		// another option: using .filter(). If you

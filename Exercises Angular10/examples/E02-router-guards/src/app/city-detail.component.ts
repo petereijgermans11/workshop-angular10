@@ -32,9 +32,9 @@ import {map, catchError, delay} from 'rxjs/operators';
     `
 })
 export class CityDetailComponent implements OnInit, OnDestroy {
-    id: string;
-    name: string;
-    currentCity: City;
+    public id: string;
+    public name: string;
+    public currentCity: City;
     private sub: Subscription; // pointer to subscription on Route
 
     constructor(private route: ActivatedRoute, private cityService: CityService) {
@@ -44,7 +44,7 @@ export class CityDetailComponent implements OnInit, OnDestroy {
         // the parameters Observable changes.
     }
 
-    ngOnInit() {
+    public ngOnInit() {
         // OLD:
         // this.id = this.route.get('id');
 
@@ -69,7 +69,7 @@ export class CityDetailComponent implements OnInit, OnDestroy {
         //     .switchMap(id => this.cityService.getCity(id))
     }
 
-    ngOnDestroy() {
+    public ngOnDestroy() {
         // If subscribed, we must unsubscribe before Angular destroys the component.
         // Failure to do so could create a memory leak.
         this.sub.unsubscribe();

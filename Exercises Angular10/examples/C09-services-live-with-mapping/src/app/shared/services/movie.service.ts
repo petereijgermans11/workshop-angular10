@@ -7,12 +7,12 @@ import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class MovieService {
     // My private key. Please sign up for your own key at www.omdbapi.com
-  url: string = 'http://www.omdbapi.com/?apikey=f1f56c8e&';
+  public url: string = 'http://www.omdbapi.com/?apikey=f1f56c8e&';
 
   constructor(private http: HttpClient) {}
 
   // return all movies
-  searchMovies(keyword): Observable<IMovie[]> {
+  public searchMovies(keyword): Observable<IMovie[]> {
     return this.http.get(this.url + `s=${keyword}`).pipe(
       map((res: any) => res.Search),
       map((movies: any[]) => {

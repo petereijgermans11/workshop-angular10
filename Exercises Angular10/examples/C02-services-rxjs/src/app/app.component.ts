@@ -21,7 +21,7 @@ export class AppComponent implements OnInit, OnDestroy  {
 
 	}
 
-	ngOnInit() {
+  public ngOnInit() {
     this.sub = this.cityService.getCities()
 			.subscribe(cityData => {
 					this.cities = cityData;
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit, OnDestroy  {
 		this.cityPhoto   = `assets/img/${this.currentCity.name}.jpg`;
 	}
 
-  ngOnDestroy() {
+  public ngOnDestroy() {
     // If subscribed, we must unsubscribe before Angular destroys the component.
     // Failure to do so could create a memory leak.
     this.sub.unsubscribe();

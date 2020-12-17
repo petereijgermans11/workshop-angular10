@@ -15,7 +15,7 @@ export class WeatherComponent {
     this.weather$ = new Observable<IWeather>();
 	}
 
-  searchWeather(keyword: string) {
+  public searchWeather(keyword: string) {
     this.weather$ = this.weatherService.searchWeather(keyword);
   }
 }

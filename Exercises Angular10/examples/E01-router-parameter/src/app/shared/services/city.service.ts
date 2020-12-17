@@ -9,11 +9,11 @@ export class CityService {
   constructor(private http: HttpClient) {}
 
   // retourneer alle cities
-  getCities(): Observable<City[]> {
+  public getCities(): Observable<City[]> {
     return this.http.get<City[]>('assets/data/cities.json');
   }
-  
-  getCity(id:number):Observable<City>{
+
+  public getCity(id:number):Observable<City>{
     return this.http.get('assets/data/cities.json')
         .pipe(
             map((res:City[]) =>{

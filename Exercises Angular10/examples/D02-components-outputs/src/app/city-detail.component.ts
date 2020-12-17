@@ -22,16 +22,16 @@ import {City} from "./shared/city.model";
 
 export class CityDetailComponent {
 	isFavorite: boolean                    = true;
-	@Input() city: City;
-	@Output() rating: EventEmitter<number> = new EventEmitter<number>();
-	@Output() fav: EventEmitter<boolean>   = new EventEmitter<boolean>();
+	@Input() public city: City;
+	@Output() public rating: EventEmitter<number> = new EventEmitter<number>();
+	@Output() public fav: EventEmitter<boolean>   = new EventEmitter<boolean>();
 
-	rate(num: number): void {
+	public rate(num: number): void {
 		console.log('rating for ', this.city.name, ': ', num);
 		this.rating.emit(num);
 	}
 
-	ngOnChanges(change) {
+  public ngOnChanges(change) {
 		// debugger;
 		if (this.city) {
 			console.log('in Changes: received new city -->', change);
@@ -40,7 +40,7 @@ export class CityDetailComponent {
 	}
 
 	// City is favorite - or not !
-	favorite() {
+  public favorite() {
 		this.isFavorite = !this.isFavorite;
 		this.fav.emit(this.isFavorite);
 	}

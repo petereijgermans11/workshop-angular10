@@ -16,7 +16,7 @@ export class AppComponent {
 
   constructor(private cityService: CityService) {}
 
-  ngOnInit() {
+  public ngOnInit() {
     this.sub = this.cityService
       .getCities()
       .subscribe(
@@ -26,19 +26,19 @@ export class AppComponent {
       );
   }
 
-  showCity(city: City) {
+  public showCity(city: City) {
     this.currentCity = city;
   }
 
-  clearCity() {
+  public clearCity() {
     this.currentCity = null;
   }
 
-  updateCityRating(rating) {
+  public updateCityRating(rating) {
     this.currentCity.rating += rating;
   }
 
-  ngOnDestroy() {
+  public ngOnDestroy() {
     // If subscribed, we must unsubscribe before Angular destroys the component.
     // Failure to do so could create a memory leak.
     this.sub.unsubscribe();

@@ -22,7 +22,7 @@ export class AppComponent implements OnInit {
 
   constructor(private cityService: CityService) {}
 
-  ngOnInit() {
+  public ngOnInit() {
     this.cities = this.cityService.getCities();
   }
 
@@ -48,7 +48,7 @@ export class AppComponent implements OnInit {
     });
   }
 
-  clear() {
+  public clear() {
     this.currentCity = null;
   }
 }

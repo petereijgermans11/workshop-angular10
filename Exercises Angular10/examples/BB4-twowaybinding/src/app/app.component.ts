@@ -13,7 +13,7 @@ export class AppComponent {
   public newCity:string = '';
 
 	// Properties
-	cities: City[]  = [
+  public cities: City[]  = [
 		new City(1, 'Groningen', 'Groningen', '', ''),
 		new City(2, 'Hengelo', 'Overijssel'),
 		new City(3, 'Den Haag', 'Zuid-Holland'),
@@ -21,7 +21,7 @@ export class AppComponent {
 
 	];
 
-	updateCity(city:City){
+  public updateCity(city:City){
 		// console.log(mijnEvent);
 		// console.log(mijnEvent.target.value);
 		this.newCityExtended = city.name;

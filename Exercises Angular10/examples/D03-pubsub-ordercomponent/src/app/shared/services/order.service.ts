@@ -5,9 +5,9 @@ import { City } from '../model/city.model';
 
 @Injectable()
 export class OrderService {
-  Stream: Subject<City>;
+  public stream: Subject<City>;
 
   constructor() {
-    this.Stream = new Subject<City>();
+    this.stream = new Subject<City>();
   }
 }

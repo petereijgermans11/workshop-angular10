@@ -43,9 +43,9 @@ export class CityOrdersComponent implements OnDestroy {
 
     }
 
-    ngOnInit() {
+    public ngOnInit() {
         // Subscribe to events being published on the orderService.Stream property.
-      this.sub = this.orderService.Stream
+      this.sub = this.orderService.stream
             .subscribe(
                 (city: City) => this.processOrder(city),
                 (err) => console.log('Error when processing City-order'),
@@ -70,16 +70,16 @@ export class CityOrdersComponent implements OnDestroy {
         //     .reduce((acc, order) => acc + order.numBookings * order.city.price, 0)
     }
 
-    cancel() {
+    public cancel() {
         this.currentOrders = [];
     }
 
-    confirm() {
+    public confirm() {
         // POST this.currentOrders.stringify()....etc.
         alert('TODO: save order in database...')
     }
 
-    ngOnDestroy() {
+    public ngOnDestroy() {
     // If subscribed, we must unsubscribe before Angular destroys the component.
     // Failure to do so could create a memory leak.
        this.sub.unsubscribe();

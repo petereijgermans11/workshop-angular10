@@ -22,21 +22,21 @@ import {FormGroup, FormControl} from "@angular/forms";
 // Class met properties
 export class CanDeactivateComponent implements OnInit {
     // Properties voor de component/class
-    myForm:FormGroup = new FormGroup({
+  public myForm: FormGroup = new FormGroup({
         txtInput:new FormControl()
     });
 
     constructor(private route: Router) { }
 
-    ngOnInit() {
+    public ngOnInit() {
         //...eventuele extra initialisaties
     }
 
-    moveAway() {
+    public moveAway() {
         this.route.navigate(['/home']);
     }
 
-    hasChanges(){
+    public hasChanges(){
         return this.myForm.dirty; // return state of the form
     }
 }

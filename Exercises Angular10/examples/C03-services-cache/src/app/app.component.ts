@@ -19,21 +19,21 @@ export class AppComponent implements OnInit {
 
   constructor(private cityService: CityService) {}
 
-  ngOnInit() {}
+  public ngOnInit() {}
 
-  loadCities() {
+  public loadCities() {
     this.cities = this.cityService.getCities();
   }
 
-  getCity(city: City) {
+  public getCity(city: City) {
     this.currentCity = city;
     this.cityPhoto = `assets/img/${this.currentCity.name}.jpg`;
   }
 
-  clear() {
+  public clear() {
     this.cities = null;
   }
-  clearCache() {
+  public clearCache() {
     this.cityService.clearCache();
   }
 }

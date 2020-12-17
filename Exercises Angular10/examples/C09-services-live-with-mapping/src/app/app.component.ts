@@ -20,7 +20,7 @@ export class AppComponent {
 
 	}
 
-	searchMovies(keyword) {
+  public searchMovies(keyword) {
     this.sub = this.movieService.searchMovies(keyword)
 			.subscribe((movieData:MovieModel[]) => {
 					this.movies = movieData;				// 1. success handler, mapped on client-sided Model
@@ -30,7 +30,7 @@ export class AppComponent {
 			)
 	}
 
-  ngOnDestroy() {
+  public ngOnDestroy() {
     // If subscribed, we must unsubscribe before Angular destroys the component.
     // Failure to do so could create a memory leak.
     this.sub.unsubscribe();

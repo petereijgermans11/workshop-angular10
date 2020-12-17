@@ -19,8 +19,8 @@ import {City} from "./shared/model/city.model";
 })
 
 export class CityDetailComponent {
-    @Input() city: City;
-    @Output() rating: EventEmitter<number> = new EventEmitter<number>();
+    @Input() public city: City;
+    @Output() public rating: EventEmitter<number> = new EventEmitter<number>();
 
     rate(num: number) {
         console.log('rating voor ', this.city.name, ': ', num);

@@ -6,7 +6,7 @@ import {CityService} from './shared/services/city.service';
 // import {RouteParams} from "@angular/router"; // OLD way
 import {ActivatedRoute} from '@angular/router'; // NEW way
 import {Subscription} from 'rxjs';
-import {map, catchError, delay} from 'rxjs/operators';
+import {map, catchError, delay, switchMap} from 'rxjs/operators';
 
 @Component({
     selector: 'city-detail',
@@ -32,9 +32,9 @@ import {map, catchError, delay} from 'rxjs/operators';
     `
 })
 export class CityDetailComponent implements OnInit, OnDestroy {
-    id: string;
-    name: string;
-    currentCity: City;
+    public id: string;
+    public name: string;
+    public currentCity: City;
     private sub: Subscription; // pointer to subscription on Route
 
     constructor(private route: ActivatedRoute, private cityService: CityService) {
@@ -44,7 +44,7 @@ export class CityDetailComponent implements OnInit, OnDestroy {
         // the parameters Observable changes.
     }
 
-    ngOnInit() {
+    public ngOnInit() {
         // OLD:
         // this.id = this.route.get('id');
 
@@ -52,7 +52,7 @@ export class CityDetailComponent implements OnInit, OnDestroy {
         this.sub = this.route.params.subscribe((params: any) => {
             this.id = params.id;
         });
-        
+
         // // New - paramMap
         // this.route.paramMap.subscribe((paramObject: any) => {
         //     this.id = paramObject.get('id');
@@ -76,7 +76,7 @@ export class CityDetailComponent implements OnInit, OnDestroy {
         //     )
     }
 
-    ngOnDestroy() {
+    public ngOnDestroy() {
         // If subscribed, we must unsubscribe before Angular destroys the component.
         // Failure to do so could create a memory leak.
         this.sub.unsubscribe();

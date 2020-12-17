@@ -12,7 +12,7 @@ export class WeatherService {
   constructor(private http: HttpClient) {}
 
   // return Weather
-  searchWeather(cityname: string): Observable<IWeather> {
+  public searchWeather(cityname: string): Observable<IWeather> {
     return this.http.get<IWeather>(this.url + `q=${cityname}`).pipe(
       map(response => {
         const weatherdata: IWeather = response;
@@ -29,5 +29,5 @@ export class WeatherService {
       console.info('Did you forget to start json server? (npm run json-server)');
       return Observable.throw(error);
     }
-  
+
 }

@@ -32,7 +32,7 @@ export class AppComponent implements OnInit {
 	}
 
 	// 0. Initialize. Fetch all cities
-	ngOnInit() {
+  public ngOnInit() {
 		// we can use the async pipe here
 		this.cities = this.cityService.getCities()
 	}
@@ -75,7 +75,7 @@ export class AppComponent implements OnInit {
 			})
 	}
 
-	cancel() {
+  public cancel() {
 		this.isEditing = false;
 	}
 }

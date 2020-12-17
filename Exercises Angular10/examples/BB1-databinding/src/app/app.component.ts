@@ -10,10 +10,10 @@ import {City} from "./shared/city.model";
 })
 
 export class AppComponent implements OnInit{
-    name: string;
-    city: string;
-    cities: string[];
-    citiesVolgensModel: City[];
+    public name: string;
+    public city: string;
+    public cities: string[];
+    public citiesVolgensModel: City[];
 
     constructor() {
 

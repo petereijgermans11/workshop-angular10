@@ -25,23 +25,23 @@ import {OrderService} from "./shared/services/order.service";
 })
 
 export class CityDetailComponent {
-	@Input() city:City;
-	@Output() rating:EventEmitter<number> = new EventEmitter<number>();
+	@Input() public city:City;
+	@Output() public rating:EventEmitter<number> = new EventEmitter<number>();
 
 	constructor(private orderService:OrderService) {
 
 	}
 
 	// send rating for current city
-	rate(num) {
+  public rate(num) {
 		console.log(`Rating voor : ${this.city.name}, ${num}`);
 		this.rating.emit(num);
 	}
 
 	// Place Order. Emitten event for this city via OrderService event bus.
 	// Capture the event in city-orders.component.ts
-	order(city) {
+  public order(city) {
 		console.log(`City trip booked for: ${this.city.name}, for EUR ${this.city.price}`);
-		this.orderService.Stream.next(city);
+		this.orderService.stream.next(city);
 	}
 }

@@ -18,27 +18,27 @@ export class AppComponent {
 
   }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.getCities();
   }
 
-  getCity(city: City) {
+  public getCity(city: City) {
     this.currentCity = city;
   }
 
-  clearCity() {
+  public clearCity() {
     this.currentCity = null;
   }
 
   // increase or decrease rating on Event Emitted
-  updateRating(rating: number) {
+  public updateRating(rating: number) {
     this.currentCity.rating += rating;
   }
 
   //***********************
   // implementation
   //***********************
-  getCities() {
+  public getCities() {
     if (!this.cities) {
       this.cityService.getCities().subscribe(
         cityData => {

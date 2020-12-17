@@ -23,15 +23,15 @@ import {City} from './shared/city.model'
 // Class with properties, array containing cities
 export class AppComponent {
 	// Properties on the component/class
-	name: string = 'Peter Eijgermans';
-	cities: City[] = [
+  public name: string = 'Peter Eijgermans';
+  public cities: City[] = [
 		new City(1, 'Groningen', 'Groningen'),
 		new City(2, 'Hengelo', 'Overijssel'),
 		new City(3, 'Den Haag', 'Zuid-Holland'),
 		new City(4, 'Enschede', 'Overijssel'),
 	];
-	counter: number =0;
-	txtKeyUp : string = '';
+  public counter: number =0;
+  public txtKeyUp : string = '';
 
 	// 1. Bind to click-event in the page
 	btnClick(){

@@ -17,20 +17,20 @@ export class AppComponent {
   constructor(private cityService: CityService) {
   }
 
-  ngOnInit() {
+  public ngOnInit() {
     this.getCities();
   }
 
-  getCity(city: City) {
+  public getCity(city: City) {
     this.currentCity = city;
   }
 
-  clearCity() {
+  public clearCity() {
     this.currentCity = null;
   }
 
   // increase or decrease rating on Event Emitted
-  updateRating(rating: number) {
+  public updateRating(rating: number) {
     this.currentCity.rating += rating;
   }
 

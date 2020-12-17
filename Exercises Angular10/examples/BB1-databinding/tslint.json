@@ -1,4 +1,5 @@
 {
+
   "extends": "tslint:recommended",
   "rules": {
     "align": {
@@ -63,6 +64,7 @@
       "timeEnd",
       "trace"
     ],
+    "member-access": true,
     "no-empty": false,
     "no-inferrable-types": [
       true,

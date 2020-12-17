@@ -20,7 +20,7 @@ export class AppComponent implements  OnInit{
 
 	}
 
-	ngOnInit(){
+  public ngOnInit(){
     this.sub = this.cityService.getCities()
 			.subscribe(cityData => {
 					this.cities = cityData; // 1. success handler
@@ -32,24 +32,24 @@ export class AppComponent implements  OnInit{
 			)
 	}
 
-	getCity(city) {
+  public getCity(city) {
 		this.currentCity = city;
 	}
 
-	clearCity() {
+  public clearCity() {
 		this.currentCity = null;
 	}
 
 	// increase or decrease rating on Event Emitted
-	updateRating(rating: number): void {
+  public updateRating(rating: number): void {
 		this.currentCity.rating += rating;
 	}
 
-	updateFavorite(favorite: boolean): void {
+  public updateFavorite(favorite: boolean): void {
 		this.currentCity.favorite = favorite;
 	}
 
-  ngOnDestroy() {
+  public ngOnDestroy() {
     // If subscribed, we must unsubscribe before Angular destroys the component.
     // Failure to do so could create a memory leak.
     this.sub.unsubscribe();

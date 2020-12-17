@@ -25,14 +25,14 @@ export class AppComponent implements OnInit {
 
 	constructor(private cityService: CityService) {}
 
-	ngOnInit() {
+  public ngOnInit() {
 		// The  OBSERVABLE from the service is now directly assigned to the class property.
 		// no more .subscribe(), this is being handled
 		// by | async in the html
 		this.cities$ = this.cityService.getCities();
 	}
 
-	getCity(city: City) {
+  public getCity(city: City) {
 		this.currentCity = city;
 		this.cityPhoto = `assets/img/${this.currentCity.name}.jpg`;
 	}

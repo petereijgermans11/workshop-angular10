@@ -1,4 +1,5 @@
 {
+  "member-access": true,
   "extends": "tslint:recommended",
   "rules": {
     "align": {

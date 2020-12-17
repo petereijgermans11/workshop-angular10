@@ -20,22 +20,22 @@ export class AppComponent implements  OnInit{
 
 	}
 
-	ngOnInit() {
+  public ngOnInit() {
 		this.getCities();
 	}
 
-	getCity(city) {
+  public getCity(city) {
 		this.currentCity = city;
 	}
 
-	clearCity() {
+  public clearCity() {
 		this.currentCity = null;
 	}
 
 	//***********************
 	// implementation
 	//***********************
-	getCities() {
+  public getCities() {
 		if (!this.cities) {
       this.sub = this.cityService.getCities()
 				.subscribe(cityData => {
@@ -47,7 +47,7 @@ export class AppComponent implements  OnInit{
 		}
 	}
 
-  ngOnDestroy() {
+  public ngOnDestroy() {
     // If subscribed, we must unsubscribe before Angular destroys the component.
     // Failure to do so could create a memory leak.
     this.sub.unsubscribe();

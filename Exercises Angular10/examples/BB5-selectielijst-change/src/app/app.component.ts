@@ -14,7 +14,7 @@ export class AppComponent implements OnInit {
     public cityPhoto: string;
     public cities: City[];
 
-    ngOnInit() {
+    public ngOnInit() {
         this.cities = [
             new City(1, 'Groningen', 'Groningen'),
             new City(2, 'Hengelo', 'Overijssel'),
@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
         this.changeCity();
     }
 
-    changeCity() {
+    public changeCity() {
         console.log(this.currentCity);
         this.cityPhoto = `assets/img/${this.currentCity}.jpg`;
     }

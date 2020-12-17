@@ -5,7 +5,7 @@ import { City } from '../model/city.model';
 
 @Injectable()
 export class OrderService {
-  Stream: Subject<City>;
+  public Stream: Subject<City>;
 
   constructor() {
     this.Stream = new Subject<City>();

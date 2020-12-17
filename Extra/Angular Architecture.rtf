@@ -1,94 +1,109 @@
-{\rtf1\ansi\ansicpg1252\cocoartf1561\cocoasubrtf600
-{\fonttbl\f0\fswiss\fcharset0 Helvetica;\f1\froman\fcharset0 Times-Roman;\f2\fnil\fcharset0 Georgia;
-\f3\fnil\fcharset0 LucidaGrande;\f4\fnil\fcharset0 LucidaGrande-Bold;\f5\fnil\fcharset0 Menlo-Regular;
-}
+{\rtf1\ansi\ansicpg1252\cocoartf2512
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica-Bold;\f1\fswiss\fcharset0 Helvetica;\f2\froman\fcharset0 Times-Roman;
+\f3\fnil\fcharset0 Georgia;\f4\fnil\fcharset0 LucidaGrande;\f5\fnil\fcharset0 LucidaGrande-Bold;
+\f6\fnil\fcharset0 Georgia-BoldItalic;\f7\fnil\fcharset0 Georgia-Bold;\f8\fnil\fcharset0 Menlo-Regular;
+\f9\fnil\fcharset0 Georgia-Italic;}
 {\colortbl;\red255\green255\blue255;\red0\green0\blue233;\red0\green0\blue0;\red255\green255\blue255;
-\red0\green0\blue0;\red0\green0\blue0;}
+\red52\green52\blue52;\red0\green0\blue0;\red0\green0\blue0;}
 {\*\expandedcolortbl;;\cssrgb\c0\c0\c93333;\cssrgb\c0\c0\c0\c84314;\cssrgb\c100000\c100000\c100000;
-\cssrgb\c0\c0\c0\c4706;\cssrgb\c0\c0\c0\c68235;}
-\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh18640\viewkind0
+\cssrgb\c26667\c26667\c26667;\cssrgb\c0\c0\c0\c4706;\cssrgb\c0\c0\c0\c68235;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww33400\viewh18500\viewkind0
 \pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
 
 \f0\b\fs72 \cf0 \ul \ulc0 Architecture
-\b0\fs24 \ulnone \
+\f1\b0\fs24 \ulnone \
+\
+https://www.thetombomb.com/2019/11/13/app-module-vs-core-module-vs-shared-module-vs-feature-modules-in-angular/#:~:text=The%20Core%20Module%20is%20where,that%20it%20is%20provided%20in.\
+\
+https://medium.com/@joao.aguas/angular-core-and-shared-modules-efe072bc9645\
+\pard\pardeftab720\sl280\partightenfactor0
+
+\f2 \cf2 \expnd0\expndtw0\kerning0
+\ul \ulc2 \
+https://medium.com/olegburlaka/modular-architecture-of-spa-on-angular-8-and-gitsubmodule-as-first-step-to-micro-frontend-bc2b06b77d2e\
 \
 \pard\pardeftab720\sl280\partightenfactor0
-{\field{\*\fldinst{HYPERLINK "https://medium.com/@tomastrajan/6-best-practices-pro-tips-for-angular-cli-better-developer-experience-7b328bc9db81"}}{\fldrslt 
-\f1 \cf2 \expnd0\expndtw0\kerning0
-\ul \ulc2 https://medium.com/@tomastrajan/6-best-practices-pro-tips-for-angular-cli-better-developer-experience-7b328bc9db81}}
-\f1 \cf2 \expnd0\expndtw0\kerning0
-\ul \ulc2 \
+{\field{\*\fldinst{HYPERLINK "https://medium.com/@tomastrajan/6-best-practices-pro-tips-for-angular-cli-better-developer-experience-7b328bc9db81"}}{\fldrslt \cf2 https://medium.com/@tomastrajan/6-best-practices-pro-tips-for-angular-cli-better-developer-experience-7b328bc9db81}}\
 \
 \
 \pard\pardeftab720\sl480\partightenfactor0
 
-\f2\fs42 \cf3 \cb4 \ulnone A good guideline to follow is to split our application into at least three different modules
-\f3 \uc0\u8202 
-\f2 \'97
-\f3 \uc0\u8202 
-\f2 Core, Shared and Feature:\
+\f3\fs42 \cf3 \cb4 \ulnone A good guideline to follow is to split our application into at least three different modules
+\f4 \uc0\u8202 
+\f3 \'97
+\f4 \uc0\u8202 
+\f3 Core, Shared and Feature:\
 \
 \pard\pardeftab720\sl620\partightenfactor0
 
-\f4\b\fs52 \cf3 CoreModule\
+\f5\b\fs52 \cf3 CoreModule\
 \pard\pardeftab720\sl480\partightenfactor0
 
-\f2\i\fs42 \cf3 All services
-\i0\b0  which have to have one and only one instance per application (singleton services) should be implemented here. \
+\f6\i\fs42 \cf3 All services
+\f3\i0\b0  which have to have one and only one instance per application (singleton services) should be implemented here. \
 Typical example can be 
-\b authentication service
-\b0  or 
-\b user service
-\b0 .\
+\f7\b authentication service
+\f3\b0  or 
+\f7\b user service
+\f3\b0 .\
 \
+\pard\pardeftab720\partightenfactor0
+
+\f1\fs38 \cf5 \outl0\strokewidth0 \strokec5 Another piece of our application that should live in the Core Modules are 
+\f0\b app-level components
+\f1\b0 . \
+A good example of an app-level component would be the navigation bar. Only the app needs to know about our navigation component.
+\f3\fs42 \cf3 \outl0\strokewidth0 \
+\pard\pardeftab720\sl480\partightenfactor0
+\cf3 \
 \pard\pardeftab720\sl620\partightenfactor0
 
-\f4\b\fs52 \cf3 SharedModule\
+\f5\b\fs52 \cf3 SharedModule\
 \pard\pardeftab720\sl480\partightenfactor0
 
-\f2\b0\fs42 \cf3 All the 
-\b \'93dumb\'94 components and pipes
-\b0  should be implemented here. \
+\f3\b0\fs42 \cf3 All the 
+\f7\b \'93dumb\'94 components and pipes
+\f3\b0  should be implemented here. \
 These components don\'92t import and inject services from core or other features in their constructors.\
 \
 They should receive all data though attributes in the template of the component using them. \
 This all sums up to the fact that\'a0
-\f5\fs32 \cb5 SharedModule
-\f2\fs42 \cb4 \'a0doesn\'92t have any dependency to the rest of our application.\
+\f8\fs32 \cb6 SharedModule
+\f3\fs42 \cb4 \'a0doesn\'92t have any dependency to the rest of our application.\
 \
 \pard\pardeftab720\sl620\partightenfactor0
 
-\f4\b\fs52 \cf3 FeatureModule\
+\f5\b\fs52 \cf3 FeatureModule\
 \pard\pardeftab720\sl480\partightenfactor0
 
-\f2\b0\fs42 \cf3 We are going to create multiple feature modules for every independent feature of our application. \
-Feature modules should only import services from\'a0
-\f5\fs32 \cb5 CoreModule
-\f2\fs42 \cb4 . \
+\f3\b0\fs42 \cf3 We are going to create multiple feature modules for every independent feature of our application. \
+Feature modules should import services from\'a0
+\f8\fs32 \cb6 SharedModule and CoreModule
+\f3\fs42 \cb4 . \
 If feature module A needs to import service from feature module B, consider moving that service into core! (Example authentication service or user service\
 \
 \pard\pardeftab720\sl880\partightenfactor0
 
-\i\fs60 \cf6 Rule of thumb is to try to create features which don\'92t depend on any other features\
+\f9\i\fs60 \cf7 Rule of thumb is to try to create features which don\'92t depend on any other features\
  1  just on services provided by CoreModule\
  2 and components provided by SharedModule.\
 \
 \pard\pardeftab720\sl620\partightenfactor0
 
-\f4\i0\b\fs52 \cf3 LazyLoading\
+\f5\i0\b\fs52 \cf3 LazyLoading\
 \pard\pardeftab720\sl660\partightenfactor0
 
-\f2\b0\fs42 \cf3 We should lazy load our feature modules whenever possible.\
+\f3\b0\fs42 \cf3 We should lazy load our feature modules whenever possible.\
 \pard\pardeftab720\sl880\partightenfactor0
 
-\i\fs60 \cf6 \
+\f9\i\fs60 \cf7 \
 \pard\pardeftab720\sl780\partightenfactor0
 
-\f4\i0\b\fs68 \cf3 Aliases for app and environments\
+\f5\i0\b\fs68 \cf3 Aliases for app and environments\
 \pard\pardeftab720\sl480\partightenfactor0
 
-\f2\b0\fs42 \cf3 Aliasing our app and environments folders will enable us to implement clean 
-\b imports
-\b0  which will be consistent throughout our application.
-\i\fs60 \cf6 \
+\f3\b0\fs42 \cf3 Aliasing our app and environments folders will enable us to implement clean 
+\f7\b imports
+\f3\b0  which will be consistent throughout our application.
+\f9\i\fs60 \cf7 \
 }

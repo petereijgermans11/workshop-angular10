@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/Exercises Angular10/examples/G05-angular-ngrx-example" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/Exercises Angular10/examples/G07-Angular-testing-course/angular-testing-course" vcs="Git" />
   </component>
 </project>

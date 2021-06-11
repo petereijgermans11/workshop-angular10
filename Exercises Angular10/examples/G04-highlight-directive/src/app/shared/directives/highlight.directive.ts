@@ -19,11 +19,11 @@ export class HighlightDirective {
 
   @HostListener('mouseleave')
   onMouseLeave() {
-    this.highlight(null);
+    this.highlight('white');
   }
 
   // private function.
   private highlight(color: string) {
-    this.el.style.backgroundColor = color;
+    this.el.style.textShadow = '1px 1px 2px ' + color;
   }
 }

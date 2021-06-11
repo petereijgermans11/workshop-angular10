@@ -15,14 +15,14 @@ export class AppComponent implements OnInit, OnDestroy  {
 	public currentCity: City;
   public cities: City[];
   public cityPhoto: string;
-  private sub: Subscription;
+  private subscription: Subscription;
 
 	constructor(private cityService: CityService) {
 
 	}
 
   public ngOnInit() {
-    this.sub = this.cityService.getCities()
+    this.subscription = this.cityService.getCities()
 			.subscribe(cityData => {
 					this.cities = cityData;
 				},
@@ -38,6 +38,6 @@ export class AppComponent implements OnInit, OnDestroy  {
   public ngOnDestroy() {
     // If subscribed, we must unsubscribe before Angular destroys the component.
     // Failure to do so could create a memory leak.
-    this.sub.unsubscribe();
+    this.subscription.unsubscribe();
   }
 }

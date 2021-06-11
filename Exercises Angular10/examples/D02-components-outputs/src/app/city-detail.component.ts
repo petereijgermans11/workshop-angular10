@@ -21,7 +21,7 @@ import {City} from "./shared/city.model";
 })
 
 export class CityDetailComponent {
-	isFavorite: boolean                    = true;
+	isFavorite: boolean = true;
 	@Input() public city: City;
 	@Output() public rating: EventEmitter<number> = new EventEmitter<number>();
 	@Output() public fav: EventEmitter<boolean>   = new EventEmitter<boolean>();

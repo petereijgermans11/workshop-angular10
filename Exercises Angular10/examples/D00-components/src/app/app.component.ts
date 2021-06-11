@@ -14,7 +14,7 @@ import {Subscription} from 'rxjs';
 export class AppComponent implements OnInit {
   // Properties
   public cities: City[];
-  public currentCity: boolean = false;
+  public currentCity: City;
   private sub: Subscription;
 
   constructor(private cityService: CityService) {
@@ -30,8 +30,8 @@ export class AppComponent implements OnInit {
     );
   }
 
-  public getCity() {
-    this.currentCity = true;
+  public getCity(city: City) {
+    this.currentCity = city;
     // later: this.currentCity = city;
   }
 

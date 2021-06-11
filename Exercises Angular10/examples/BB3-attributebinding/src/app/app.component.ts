@@ -37,14 +37,14 @@ export class AppComponent {
         new City(3, 'Den Haag', 'Zuid-Holland'),
         new City(4, 'Enschede', 'Overijssel'),
     ];
-    private textVisible: boolean = true;
+    public textVisible: boolean = true;
     public currentCity: City = null;
     public cityPhoto: string = '';
 
     // Update selected city in UI, using ES6 string interpolation
-    public updateCity(city: City) {
+    public deleteCity(city: City) {
         this.currentCity = city;
-        this.cityPhoto = `assets/img/${this.currentCity.name}.jpg`;
+      this.cities.splice(this.currentCity.id, 1)
     }
 
     public toggleText(){

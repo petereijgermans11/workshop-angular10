@@ -18,12 +18,13 @@ export class AppComponent implements OnInit{
     constructor() {
 
     }
+
     ngOnInit(){
         this.name = 'Peter Eijgermans';
         this.city = 'Groningen';
         this.cities = ['Groningen', 'Hengelo', 'Den Haag', 'Enschede'];
         this.citiesVolgensModel = [
-            new City(1, 'Groningen', 'Groningen'),
+            new City(1, 'Groningen', 'Groningen', 'NE'),
             new City(2, 'Hengelo', 'Overijssel'),
             new City(3, 'Den Haag', 'Zuid-Holland'),
             new City(4, 'Enschede', 'Overijssel'),

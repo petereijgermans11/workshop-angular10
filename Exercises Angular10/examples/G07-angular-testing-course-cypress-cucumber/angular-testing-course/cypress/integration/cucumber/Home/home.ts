@@ -1,13 +1,11 @@
 import {Given} from 'cypress-cucumber-preprocessor/steps'
 
-// const url = 'http://localhost:4200/'
-
 beforeEach(() => {
-  cy.fixture('courses.json').as("coursesJSON");
+  cy.fixture('courses.json').as("coursesJSON"); // use alias for async
 
-  cy.server();
+  cy.server();  // Start a server to begin routing responses to cy.route(), and to change the behavior of network requests
 
-  cy.route('/api/courses', "@coursesJSON").as("courses");
+  cy.route('/api/courses', "@coursesJSON").as("courses"); // use alias for async
 
   cy.visit('/');
 });

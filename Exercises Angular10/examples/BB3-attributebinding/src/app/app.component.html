@@ -7,7 +7,7 @@
 <h2>My favourite cities are:</h2>
 <ul class="list-group">
 	<li *ngFor="let city of cities" class="list-group-item"
-		(click)="updateCity(city)">
+		(click)="deleteCity(city)">
 		{{ city.id}} - {{ city.name }}
 	</li>
 </ul>

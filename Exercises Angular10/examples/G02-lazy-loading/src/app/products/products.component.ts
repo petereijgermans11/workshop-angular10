@@ -9,6 +9,7 @@ export class ProductsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    console.log("ProductsComponent geladen");
   }
 
 }

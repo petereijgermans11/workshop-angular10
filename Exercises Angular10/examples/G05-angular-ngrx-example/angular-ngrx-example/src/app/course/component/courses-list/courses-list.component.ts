@@ -24,6 +24,7 @@ export class CoursesListComponent implements OnInit {
   constructor(private courseService: CourseService, private store: Store<AppState>) { }
 
   ngOnInit() {
+    console.log(this.store.select(getAllCourses));
     this.courses$ = this.store.select(getAllCourses);
   }
 

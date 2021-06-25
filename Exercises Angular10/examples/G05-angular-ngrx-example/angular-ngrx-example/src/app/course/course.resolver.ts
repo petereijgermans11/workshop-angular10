@@ -18,7 +18,7 @@ export class CourseResolver implements Resolve<Observable<any>> {
     .pipe(
         select(areCoursesLoaded),
         tap((coursesLoaded) => {
-          console.log('111', coursesLoaded);
+
           if (!coursesLoaded) {
             this.store.dispatch(loadCourses());
           }

@@ -12,14 +12,18 @@
 <hr>
 <h3>My favourite cities are:</h3>
 <ul>
-    <li *ngFor="let city of cities">{{ city}}</li>
+    <li *ngFor="let city of cities">
+      {{ city}}
+    </li>
 </ul>
 <hr>
 <!-- ********************************** -->
 <!-- Using *ngIf  -->
 <!-- ********************************** -->
 <h3>Using *ngIf</h3>
-<p *ngIf='cities.length > 3'>You have many favourite cities! (over 3)</p>
+<p *ngIf='cities.length > 3'>
+  You have many favourite cities! (over 3)
+</p>
 
 <!-- ********************************** -->
 <!-- Using a Model (shared/city.model.ts) -->
@@ -27,5 +31,7 @@
 <hr>
 <h3>Cities, using a Model:</h3>
 <ul>
-    <li *ngFor='let city of citiesVolgensModel'>{{ city.id}} - {{ city.name }} - {{ city.land}}</li>
+    <li *ngFor='let city of citiesVolgensModel'>
+      {{ city.id}} - {{ city.name }} - {{ city.land}}
+    </li>
 </ul>

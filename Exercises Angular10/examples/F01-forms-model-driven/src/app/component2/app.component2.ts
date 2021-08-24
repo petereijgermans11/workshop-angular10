@@ -51,7 +51,7 @@ export class AppComponent2 implements OnInit {
 		// 1. Define the model of Reactive Form.
 		this.myReactiveForm = this.formBuilder.group({
 			email   : ['', Validators.required],
-			password: ['', Validators.compose([Validators.required, Validators.minLength(6)])],
+			password: ['' ,Validators.compose([Validators.required, Validators.minLength(6)])],
 			confirm : ['', Validators.compose([Validators.required, Validators.minLength(6)])],
 			customer: this.formBuilder.group({
 				prefix   : ``,

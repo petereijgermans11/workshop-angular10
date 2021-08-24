@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 export class WeatherComponent {
 	public weather$: Observable<IWeather>;
 
-	constructor(private weatherService:WeatherService) {
+	constructor(private weatherService: WeatherService) {
     this.weather$ = new Observable<IWeather>();
 	}
 

@@ -1,0 +1,1 @@
+{"ast":null,"code":"export class City {\n  constructor(id, name, province, land) {\n    this.id = id;\n    this.name = name;\n    this.province = province;\n    this.land = land;\n  }\n\n}","map":null,"metadata":{},"sourceType":"module"}

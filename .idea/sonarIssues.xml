@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/.idea/sonarIssues.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/BB2-eventbinding/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/BB2-eventbinding/src/app/app.module.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/BB3-attributebinding/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/BB4-twowaybinding/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/BB5-selectielijst-change/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/C00-services-static/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/C00-services-static/src/app/shared/city.service.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/C01-services-http/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/C02-services-rxjs/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/C02-services-rxjs/src/app/app.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/C03-services-cache/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/C04-services-apiService/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/C05-services-http-CRUD/src/app/app.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/C05-services-http-CRUD/src/app/shared/services/city.service.solution.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/C05-services-http-CRUD/src/app/shared/services/city.service.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/C08-services-live-weather/package.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/D03-pubsub-ordercomponent/src/app/city-orders.component.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/E02-router-guards/src/app/app.component.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/Exercises Angular10/examples/G01-pipes/src/app/app.component.html">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/workspaces/prorail/feniks/feniks/git-repos/feniks-mmi/src/app/core/infra-utilisation/infra-inzet-mapper.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/workspaces/prorail/feniks/feniks/git-repos/feniks-mmi/src/app/core/infra-utilisation/store/infra-utilisation.selectors.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/workspaces/prorail/feniks/feniks/git-repos/feniks-mmi/src/app/feature/rijwegen/rijwegen-bediening/model/toestemmingbeweging.ts">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/workspaces/prorail/feniks/feniks/git-repos/feniks-mmi/src/assets/stubs/feniks-api/infra/utilisation/inzet/actueel/UTCTW.json">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

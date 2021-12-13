@@ -1,5 +1,5 @@
 {
-  "name": "c05",
+  "name": "c05-services-http-crud",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
